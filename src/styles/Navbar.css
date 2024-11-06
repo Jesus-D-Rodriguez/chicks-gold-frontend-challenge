@@ -29,8 +29,18 @@
 
 .navbar-options {
     width: 86%;
+    display: flex;
 }
 
-.options a {
+.options {
     text-decoration: none;
+    color: #c6c7cf;
+}
+
+.nav-links {
+    width: 80%;
+}
+
+.user-options {
+    width: 20%;
 }
