@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #303141;
+    height: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container {
+    width: 97.5%;
+    height: 70%;
+    display: flex;
+}
+
+.logo-container {
+    max-width: 150px;
+    width: 14%;
+    border-right: 1px solid #9596a0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.logo {
+    width: 80%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.navbar-options {
+    width: 86%;
+}
+
+.options a {
+    text-decoration: none;
+}
