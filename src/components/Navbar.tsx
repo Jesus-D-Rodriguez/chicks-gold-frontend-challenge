@@ -1,4 +1,6 @@
 import "../styles/Navbar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar: React.FC = () => {
     return (
@@ -9,17 +11,17 @@ const Navbar: React.FC = () => {
             </div>
             <div className="navbar-options">
                 <div className="nav-links">
-                    <a className="options" href="">CURRENCY</a>
-                    <a className="options" href="">ITEMS</a>
-                    <a className="options" href="">ACCOUNTS</a>
-                    <a className="options" href="">SERVICES</a>
-                    <a className="options" href="">SWAP</a>
-                    <a className="options" href="">SELL</a>
+                    <a className="options" href="">CURRENCY <FontAwesomeIcon className="chevron-down" icon={faChevronDown} /></a> 
+                    <a className="options" href="">ITEMS <FontAwesomeIcon className="chevron-down" icon={faChevronDown} /></a>
+                    <a className="options" href="">ACCOUNTS <FontAwesomeIcon className="chevron-down" icon={faChevronDown} /></a>
+                    <a className="options" href="">SERVICES <FontAwesomeIcon className="chevron-down" icon={faChevronDown} /></a>
+                    <a className="options" href="">SWAP <FontAwesomeIcon className="chevron-down" icon={faChevronDown} /></a>
+                    <a className="options" href="">SELL <FontAwesomeIcon className="chevron-down" icon={faChevronDown} /></a>
                 </div>
                 <div className="user-options">
-                    <a className="options" href="">USD</a>
-                    <a className="options" href="">CART(5)</a>
-                    <button>SIGN IN</button>
+                    <a className="options" href="">USD <FontAwesomeIcon className="chevron-down" icon={faChevronDown} /></a>
+                    <a className="options" href=""><FontAwesomeIcon className="cart-icon" icon={faCartShopping} /> CART (5)</a>
+                    <button className="sign-in-button">SIGN IN <FontAwesomeIcon icon={faUser} /></button>
                 </div>
             </div>
         </div>

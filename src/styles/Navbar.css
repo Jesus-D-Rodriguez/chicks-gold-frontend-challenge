@@ -15,7 +15,7 @@
 .logo-container {
     /*max-width: 150px;*/
     width: 12%;
-    border-right: 1px solid #9596a0;
+    border-right: 1px solid #fafcff;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -25,20 +25,24 @@
     width: 80%;
     height: auto;
     margin-bottom: 5px;
+    /*fill: white;*/
+    filter: brightness(0) invert(1);
 }
 
 .navbar-options {
-    width: 86%;
+    width: 88%;
     display: flex;
 }
 
 .options {
     text-decoration: none;
-    color: #c6c7cf;
+    color: #fafcff;
     display: flex;
     height: 100%;
     align-items: center;
     padding: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -51,4 +55,25 @@
     width: 20%;
     display: flex;
     justify-content: end;
+}
+
+.sign-in-button {
+    background-color: #39e29d;
+    border: none;
+    padding: 0px 20px 0px 20px;
+    /*width: 250px;*/
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.chevron-down {
+    margin-left: 2px;
+    width: 10px;
+    color: #fafcff;
+}
+
+.cart-icon {
+    margin-right: 2px;
+    width: 15px;
+    color: #fafcff;
 }
