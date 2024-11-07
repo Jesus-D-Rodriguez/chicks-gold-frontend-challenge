@@ -1,20 +1,20 @@
 .navbar {
     background-color: #303141;
-    height: 60px; 
+    height: 65px; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .navbar-container {
-    width: 97.5%;
+    width: 96%;
     height: 70%;
     display: flex;
 }
 
 .logo-container {
-    max-width: 150px;
-    width: 14%;
+    /*max-width: 150px;*/
+    width: 12%;
     border-right: 1px solid #9596a0;
     display: flex;
     justify-content: left;
@@ -35,12 +35,20 @@
 .options {
     text-decoration: none;
     color: #c6c7cf;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 20px;
 }
 
 .nav-links {
     width: 80%;
+    display: flex;
+    padding-left: 20px;
 }
 
 .user-options {
     width: 20%;
+    display: flex;
+    justify-content: end;
 }

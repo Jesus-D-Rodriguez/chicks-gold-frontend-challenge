@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
                     <a className="options" href="">CURRENCY</a>
                     <a className="options" href="">ITEMS</a>
                     <a className="options" href="">ACCOUNTS</a>
-                    <a className="options" href="">SEVICES</a>
+                    <a className="options" href="">SERVICES</a>
                     <a className="options" href="">SWAP</a>
                     <a className="options" href="">SELL</a>
                 </div>
