@@ -1,9 +1,14 @@
+@import './variables.css';
+
 .navbar {
     background-color: #303141;
-    height: 65px; 
+    height: var(--navbar-height);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 
 .navbar-container {
@@ -13,7 +18,6 @@
 }
 
 .logo-container {
-    /*max-width: 150px;*/
     width: 12%;
     border-right: 1px solid #fafcff;
     display: flex;
@@ -25,7 +29,6 @@
     width: 80%;
     height: auto;
     margin-bottom: 5px;
-    /*fill: white;*/
     filter: brightness(0) invert(1);
 }
 
@@ -61,7 +64,6 @@
     background-color: #39e29d;
     border: none;
     padding: 0px 20px 0px 20px;
-    /*width: 250px;*/
     border-radius: 4px;
     white-space: nowrap;
 }
