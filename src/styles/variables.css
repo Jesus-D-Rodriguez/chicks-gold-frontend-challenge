@@ -1,5 +1,7 @@
 :root {
     --navbar-height: 65px;
-    --filter-color: rgba(60, 65, 88, 0.5);
+    --filter-color: rgba(60, 65, 88, 0.7);
     --padding-filter: 5px;
+    --icons-green: #3cc898;
+    --border-gray: #4b5c7e;
 }

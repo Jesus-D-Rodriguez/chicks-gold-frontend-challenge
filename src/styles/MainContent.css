@@ -51,6 +51,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    font-size: 0.8rem;
 }
 
 .select-game-filter-second-part {
@@ -61,8 +62,10 @@
 }
 
 .sword-img {
-    width: 30px;
+    width: 20px;
     height: auto;
+    filter: brightness(0) invert(1);
+    padding-right: 5px;
 } 
 
 .search-filter {
@@ -74,8 +77,94 @@
 
 .price-filter {
     background-color: var(--filter-color);
+    margin-left: -20px;
+    border-right: 1px solid var(--border-gray);
+    width: 150px;
+}
+
+.price-filter-inside, .item-filter-inside {
+    display: flex;
+    align-items: center;
+    padding: var(--padding-filter);
+    justify-content: space-between;
+
 }
 
 .item-filter {
     background-color: var(--filter-color);
+}
+
+/*.search-filter::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    width: 15px; 
+    height: 100%; 
+    background-color: rgba(255, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+.price-filter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 15px;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5);
+    z-index: -1;
+}*/
+
+.dolar {
+    color: var(--icons-green);
+    padding-right: 10px;
+}
+
+.feather {
+    color: var(--icons-green);
+    padding-right: 10px;
+}
+
+.caret-down {
+    font-size: 12px;
+}
+
+.search-filter-inside-input{
+    background-color:transparent; 
+    border: none; 
+    outline:none; 
+    margin-left: 15px;
+    caret-color: #fafcff;
+    color: white;
+}
+
+.custom-select {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    justify-content: space-between;
+}
+
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /*padding-right: 30px; */
+    width: 120%;
+    cursor: inherit;
+    color: white;
+}
+
+.custom-select select option {
+    background-color: var(--filter-color);
+    /*color: black; */
+}
+
+.item-filter {
+    width: 150px;
 }
