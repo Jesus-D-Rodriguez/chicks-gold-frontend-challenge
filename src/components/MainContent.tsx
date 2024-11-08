@@ -1,10 +1,20 @@
+import React, { useState } from 'react';
 import "../styles/MainContent.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faMagnifyingGlass, faSackDollar, faFeather, faArrowUpWideShort } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faMagnifyingGlass, faSackDollar, faFeather, faArrowUpWideShort, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { cardData } from '../data/CardData';
 import Card from '../components/Card';
 
 const MainContent: React.FC  = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 15; 
+
+
+    const indexOfLastCard = currentPage * itemsPerPage;
+    const indexOfFirstCard = indexOfLastCard - itemsPerPage;
+    const currentCards = cardData.slice(indexOfFirstCard, indexOfLastCard);
+    
+    const totalPages = Math.ceil(cardData.length / itemsPerPage);
     return (<div className="main-content">
         <img src="/background.avif" alt="Background" className="background-image" />
         <div className="main-content-container" >
@@ -87,7 +97,7 @@ const MainContent: React.FC  = () => {
             <div className="cards-container">
                 <div className="inside-cards-container">
                     <div className="cards-container-filter">
-                        Showing 20 - from 125
+                    Showing {indexOfFirstCard + 1} - {Math.min(indexOfLastCard, cardData.length)} from {cardData.length}
                         <div className="item-filter">
                             <div className="item-filter-inside">
                                 <FontAwesomeIcon className="sort" icon={faArrowUpWideShort} />
@@ -114,7 +124,7 @@ const MainContent: React.FC  = () => {
                         </div>
                     </div>
                     <div className="cards">
-                        {cardData.map(card => (
+                        {currentCards.map(card => (
                             <Card 
                                 key={card.id}
                                 title={card.title}
@@ -128,6 +138,60 @@ const MainContent: React.FC  = () => {
                                 quantity={card.quantity}
                             />
                         ))}
+                    </div>
+                    <div className='pagination-container'>
+                        <div className="pagination">
+                            <button 
+                                className='back-button'
+                                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                disabled={currentPage === 1}
+                            >
+                                <FontAwesomeIcon icon={faChevronLeft} />
+                            </button>
+                            
+                            <button 
+                                onClick={() => setCurrentPage(1)} 
+                                className={currentPage === 1 ? 'active' : 'not-active'}
+                            >
+                                1
+                            </button>
+
+                            {totalPages > 4 && currentPage > 3 && <span>...</span>}
+
+                            {Array.from({ length: Math.min(4, totalPages - 2) }, (_, index) => {
+                                const pageNumber = index + 2; // Comenzar desde la página 2
+                                //if (pageNumber === currentPage) return null; // No mostrar el botón de la página actual
+                                if (pageNumber > totalPages - 1) return null; // Evitar mostrar botones fuera de rango
+                                return (
+                                    <button 
+                                        key={pageNumber} 
+                                        onClick={() => setCurrentPage(pageNumber)} 
+                                        className={currentPage === pageNumber ? 'active' : 'not-active'}
+                                    >
+                                        {pageNumber}
+                                    </button>
+                                );
+                            })}
+
+                            {totalPages > 4 && currentPage < totalPages - 2 && <span>...</span>}
+
+                            {totalPages > 1 && (
+                                <button 
+                                    onClick={() => setCurrentPage(totalPages)} 
+                                    className={currentPage === totalPages ? 'active' : 'not-active'}
+                                >
+                                    {totalPages}
+                                </button>
+                            )}
+
+                            <button 
+                                className='next-button'
+                                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                disabled={currentPage === totalPages}
+                            >
+                                <FontAwesomeIcon icon={faChevronRight} />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

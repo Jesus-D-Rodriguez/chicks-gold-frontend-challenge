@@ -143,6 +143,21 @@
     justify-content: space-between;
 }
 
+.pagination-container {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .custom-select select {
     appearance: none;
     -webkit-appearance: none;
@@ -196,4 +211,34 @@
     grid-template-columns: repeat(5, 1fr);
     /*grid-template-rows: repeat(3, auto);*/
     grid-template-rows: repeat(3, 1fr);
+}
+
+.back-button, .next-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #5762d5;
+    border-radius: 2px;
+    width: 40px;
+    /*margin: 20px;*/
+    color: white;
+}
+
+.active {
+    border: 1px solid #5762d5;
+    border-radius: 2px;
+    width: 40px;
+    margin: 20px;
+    background-color: #5762d5;  
+    color: white;
+}
+
+.not-active {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
 }
