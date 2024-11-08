@@ -20,7 +20,7 @@
 .main-content-container {
     height: 90%;
     width: 70%;
-    background-color: red;
+    /*background-color: red;*/
     position: relative;
     z-index: 2;
     margin: auto;
@@ -28,7 +28,7 @@
 }
 
 .main-content-filters {
-    background-color: green;
+    /*background-color: green;*/
     width: 95%;
     height: 5%;
     position: relative;
