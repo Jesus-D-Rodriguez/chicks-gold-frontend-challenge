@@ -120,6 +120,7 @@ const MainContent: React.FC  = () => {
                                 title={card.title}
                                 description={card.description}
                                 imageUrl={card.imageUrl}
+                                logo = {card.logo}
                                 price={card.price}
                                 isOnSale={card.isOnSale}
                                 isInStock={card.isInStock}

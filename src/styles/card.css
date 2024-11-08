@@ -1,3 +1,5 @@
+@import './variables.css';
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +17,7 @@
 
 .card-image {
     height: auto;
-    width: 30%;
+    width: 25%;
 }
 
 .card-content {
@@ -30,24 +32,104 @@
 
 .card-description {
     font-size: 0.9em;
-    color: #666;
+    color: var(--gray);
     height: min-content;
 }
 
 .card-price {
     font-weight: bold;
-    color: #000;
+    color: white;
     height: min-content;
 }
 
 .card-old-price {
     text-decoration: line-through;
-    color: red; /* O el color que prefieras */
+    text-decoration-color: #fd4a4a;
+    color: var(--gray);
 }
 
 .card-stock {
     font-weight: bold;
-    color: green; /* O el color que prefieras */
+    color: green;
+}
+
+.quantity-input {
+    height:100%; 
+    width:60%; 
+    background-color:#373e54;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    padding: 3px;
+}
+
+.on-sale-div {
+    height:15%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.on-sale-div p, .in-stock-div p {
+    font-size: 0.5rem;
+    height: min-content;
+}
+
+.in-stock-div {
+    border: 1px solid var(--icons-green);
+    color: var(--icons-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    width: 100%;
+    height: 60%;
+}
+
+.prices-div {
+    display:flex;
+    height: 10%;
+}
+
+.prices-div p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    
+}
+
+.dot {
+    color: var(--icons-green);
+    width: 3px;
+}
+
+.card-title-container {
+    height:20%; 
+    display:flex;
+}
+
+.card-title-container h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.details-button, .add-button {
+    height: 15%;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.details-button{
+    background-color: #35394b;
+    color: #7e818c;
+}
+
+.add-button {
+    background-color: #5762d5;
+    color: #fafcff;
+    display: flex; 
+    height: 100%;
+
 }
 
 @media (max-width: 768px) {
