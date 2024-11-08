@@ -1,6 +1,8 @@
 import "../styles/MainContent.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faMagnifyingGlass, faSackDollar, faFeather } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faMagnifyingGlass, faSackDollar, faFeather, faArrowUpWideShort } from '@fortawesome/free-solid-svg-icons';
+import { cardData } from '../data/CardData';
+import Card from '../components/Card';
 
 const MainContent: React.FC  = () => {
     return (<div className="main-content">
@@ -79,6 +81,52 @@ const MainContent: React.FC  = () => {
                             </div>
                             <FontAwesomeIcon className="caret-icon" icon={faCaretDown} />
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="cards-container">
+                <div className="inside-cards-container">
+                    <div className="cards-container-filter">
+                        Showing 20 - from 125
+                        <div className="item-filter">
+                            <div className="item-filter-inside">
+                                <FontAwesomeIcon className="sort" icon={faArrowUpWideShort} />
+                                <div className="custom-select">
+                                    <div style={{display:'grid', alignItems:'center'}}>
+                                        Item type
+                                        <select style={{height:'25px'}}>
+                                            <option value="All" selected>All</option>
+                                            <option value="Weapons">Weapons</option>
+                                            <option value="Armor">Armor</option>
+                                            <option value="Consumables">Consumables</option>
+                                            <option value="Crafting Materials">Crafting Materials</option>
+                                            <option value="Quest Items">Quest Items</option>
+                                            <option value="Accessories">Accessories</option>
+                                            <option value="Magic Items">Magic Items</option>
+                                            <option value="Tools">Tools</option>
+                                            <option value="Treasure">Treasure</option>
+                                            <option value="Miscellaneous">Miscellaneous</option>
+                                        </select>
+                                    </div>
+                                    <FontAwesomeIcon className="caret-icon" icon={faCaretDown} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="cards">
+                        {cardData.map(card => (
+                            <Card 
+                                key={card.id}
+                                title={card.title}
+                                description={card.description}
+                                imageUrl={card.imageUrl}
+                                price={card.price}
+                                isOnSale={card.isOnSale}
+                                isInStock={card.isInStock}
+                                oldPrice={card.oldPrice}
+                                quantity={card.quantity}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

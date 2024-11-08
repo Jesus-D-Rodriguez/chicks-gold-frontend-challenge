@@ -1,0 +1,63 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.card {
+    border-radius: 8px;
+    background-color: #323648;
+    overflow: hidden;
+    width: 100%;
+    max-width: 250px;
+    padding: 15px;
+}
+
+.card-image {
+    height: auto;
+    width: 30%;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin: 0;
+    height: min-content;
+}
+
+.card-description {
+    font-size: 0.9em;
+    color: #666;
+    height: min-content;
+}
+
+.card-price {
+    font-weight: bold;
+    color: #000;
+    height: min-content;
+}
+
+.card-old-price {
+    text-decoration: line-through;
+    color: red; /* O el color que prefieras */
+}
+
+.card-stock {
+    font-weight: bold;
+    color: green; /* O el color que prefieras */
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
