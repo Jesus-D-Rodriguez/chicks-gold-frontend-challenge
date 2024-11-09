@@ -23,6 +23,9 @@ const Footer:React.FC = () => {
                 <FontAwesomeIcon icon={faTwitter} />
                 <FontAwesomeIcon icon={faDiscord} />
             </div>
+            <div className="about-us">
+                <img style={{width:'100px'}} src="/chicks-logo-large.svg"></img> 
+            </div>
         </div>
     </div>);
 }

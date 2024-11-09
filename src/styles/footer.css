@@ -15,3 +15,13 @@
 .about-us-row {
     background-color: #303141;
 }
+
+.about-us {
+    position: relative;
+    display: flex;
+    height: 80%;
+}
+
+.social-media-icons {
+    height: 20%;
+}
