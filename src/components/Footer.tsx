@@ -24,8 +24,54 @@ const Footer:React.FC = () => {
                 <FontAwesomeIcon icon={faDiscord} />
             </div>
             <div className="about-us">
-                <img style={{width:'100px'}} src="/chicks-logo-large.svg"></img> 
+                <div>
+                    <img style={{width:'100px', height:'auto'}} src="/chicks-logo-large.svg"></img>
+                    <div className="links">
+                        <p>support@chicksgold.com</p> 
+                    </div>
+                </div>
+                
+                <div className="about-chicks-gold">
+                    <h1>Chicks Gold</h1>
+                    <div className="links">
+                        <a href="">Games</a>
+                        <a href="">About us</a>
+                        <a href="">Blog</a>
+                        <a href="">Sitemap</a>
+                    </div>
+                </div>
+                <div className="about-chicks-gold">
+                    <h1>Support</h1>
+
+                    <div className="links">
+                        <a href="">Contact us</a>
+                        <a href="">FAQ</a>
+                    </div>
+                    
+                </div>
+                <div className="about-chicks-gold">
+                    <h1>Legal</h1>
+                        <div className="links">
+                            <a href="">Privacy Policy</a>
+                            <a href="">Terms of Service</a>
+                            <a href="">Copyright Policy</a>
+                        </div>
+                    </div>
+                <div className="trust-review">
+                    <div className="inside-trust-reviews">
+                        <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
+                        <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>  
+                        <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
+                        <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
+                        <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>
+
+                        <p>Trustpilot Reviews</p>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div className="copyright">
+            <p>© 2017 - 2020 Chicksgold.com. All rights reserved.</p>
         </div>
     </div>);
 }
