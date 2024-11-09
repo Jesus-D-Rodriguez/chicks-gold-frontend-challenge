@@ -60,7 +60,7 @@ const Card: React.FC<CardProps> = ({ title, description, imageUrl, logo, price, 
                     )}
                 </div>
                 <p className="card-description">{description}</p>
-                <div style={{display:'flex', height:'15%'}}>
+                <div style={{display:'flex', height:'12.5%', justifyContent:'space-between'}}>
                     <button className='details-button'>DETAILS</button>
                     <button className='add-button'>ADD <div style={{color:'#fafcff', width:'20px', height:'20px'}}><FontAwesomeIcon className="cart-icon" icon={faCartShopping} /> </div> </button>
                 </div>

@@ -16,8 +16,9 @@
 }
 
 .card-image {
-    height: auto;
-    width: 25%;
+    height: 20%;
+    width: auto;
+    margin-top: 3px;
 }
 
 .card-content {
@@ -34,6 +35,7 @@
     font-size: 0.9em;
     color: var(--gray);
     height: min-content;
+    height: 20%;
 }
 
 .card-price {
@@ -84,6 +86,7 @@
     border-radius: 2px;
     width: 100%;
     height: 60%;
+    margin-top: 2px;
 }
 
 .prices-div {
@@ -122,6 +125,8 @@
 .details-button{
     background-color: #35394b;
     color: #7e818c;
+    width: 50%;
+
 }
 
 .add-button {
@@ -129,6 +134,7 @@
     color: #fafcff;
     display: flex; 
     height: 100%;
+    width: 40%;
 
 }
 

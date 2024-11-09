@@ -19,6 +19,15 @@
 .payment-methods {
     width: 70%;
     margin: auto;
+    display: flex;
+    align-items: center;
+    color: #bebfc3;
+}
+
+.payment-methods p {
+    font-weight: 400;
+    height: max-content;
+    margin-left: 10px;
 }
 
 .about-us-row {
@@ -29,9 +38,10 @@
 .about-us {
     position: relative;
     display: flex;
-    height: 80%;
+    height: 75%;
     width: 70%;
     justify-content: space-between;
+    align-items: end;
     margin: auto;
 
 }
@@ -40,6 +50,9 @@
     height: 20%;
     width: 70%;
     margin: auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid #4c6085;
 }
 
 .about-us h1, .about-us a{
@@ -49,7 +62,7 @@
 .about-us h1 {
     color: white;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: var(--h1-font-weight-navbar);
     /*margin: auto;*/
 }
 
@@ -62,17 +75,17 @@
     display: block;
     outline: none;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: var(--text-font-weight-navbar);
     color:#797b86;
 }
 
 .links p {
     color: white;
-    font-weight: 400;
+    font-weight: var(--text-font-weight-navbar);
 }
 
 .about-chicks-gold {
-    height: max-content;
+    height: 70%;
 }
 
 .inside-trust-reviews {
@@ -81,10 +94,90 @@
 
 .inside-trust-reviews p {
     color: #c0c0c5;
+    margin-left: 10px;
+    font-weight: var(--text-font-weight-navbar);
 }
 
 .copyright {
     height: 10%;
     width: max-content;
+    font-weight: var(--text-font-weight-navbar);
     margin: auto;
+    color: #cbcbcf;
+}
+
+.crypto-round-logo {
+    width: var(--crypto-round-logo-width);
+    height: auto;
+}
+
+.crypto-logo {
+    width: var(--crypto-logo-width);
+    height: auto;
+}
+
+.crypto-logo, .crypto-round-logo {
+    margin-right: 2px;
+}
+
+.facebook, .instagram, .twitter, .discord {
+    
+    color: white;
+    
+    font-size: 15px;
+}
+
+
+.twitter {
+    color: white;
+}
+
+.icon-circle {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.icon-circle.fb {
+    background-color: #3b5999;
+}
+
+.icon-circle.ig {
+    background: linear-gradient(45deg, #ef9581, #c9287d);
+}
+
+.icon-circle.tw {
+    background-color: #32a3ce;
+}
+
+.icon-circle.dc {
+    background-color: #7289d9;
+}
+
+.visa, .master-card, .american-express, .skrill {
+    margin-right: 10px;
+}
+
+.visa {
+    width: 80px;
+    height: auto;
+}
+
+.master-card {
+    width: 60px;
+    height: auto;
+}
+
+.american-express {
+    width: 90px;
+    height: auto;
+}
+
+.skrill {
+    width: 80px;
+    height: auto;
 }

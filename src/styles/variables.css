@@ -4,6 +4,11 @@
     --padding-filter: 5px;
     --icons-green: #3cc898;
     --border-gray: #4b5c7e;
-    --filter-size: 60px;
+    --filter-size: 55px;
     --gray: #6e717d;
+    --text-font-weight-navbar: 300;
+    --h1-font-weight-navbar: 400;
+    --crypto-round-logo-width: 25px;
+    --crypto-logo-width: calc(var(--crypto-round-logo-width) * 0.6);
+    --main-content-max-width: 1110px;
 }
