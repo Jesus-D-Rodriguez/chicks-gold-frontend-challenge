@@ -1,0 +1,17 @@
+@import './variables.css';
+
+.footer {
+    height: 500px;
+    top: var(--navbar-height);
+    position: relative;
+}
+
+.payment-methods-row {
+    background-color: #2b2c3b;
+    width: 100%;
+    height: 20%;
+}
+
+.about-us-row {
+    background-color: #303141;
+}
