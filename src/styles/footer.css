@@ -302,4 +302,18 @@
     .payment-methods {
         justify-content: center;
     }
+
+    .crypto-round-logo {
+        width: 15px;
+        height: auto;
+    }
+    
+    .crypto-logo {
+        width: 9px;
+        height: auto;
+    }
+
+    .payment-methods p {
+        font-size: 0.7rem;
+    }
 }

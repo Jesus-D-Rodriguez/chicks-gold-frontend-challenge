@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Home: React.FC = () => {
-    return (<div>
+    return (<div className="home">
         <Navbar/>
         <MainContent/>
         <Footer/>
