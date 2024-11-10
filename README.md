@@ -16,6 +16,7 @@ Before running the application, make sure you have the following installed on yo
 ## Installation Steps
 
 1. **Clone the Repository:**
+   
    git clone https://github.com/Jesus-D-Rodriguez/chicks-gold-frontend-challenge.git
 
 2. **Navigate to the Project Directory:**
@@ -26,7 +27,7 @@ Before running the application, make sure you have the following installed on yo
 
     npm install
 
-3. **Run the Application:**
+4. **Run the Application:**
 
     npm run dev
 
