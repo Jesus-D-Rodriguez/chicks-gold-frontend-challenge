@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+This project is a front-end application designed to match the provided design. It simulates a static interface without any API connection.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The application was developed using ReactTS. This technology was selected to best showcase my skills and to fulfill the challenge requirements.
 
-Currently, two official plugins are available:
+All styling in this application is achieved with pure CSS. No CSS frameworks (such as Bootstrap or Material UI) are used, demonstrating my ability to style the application using fundamental web technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure you have the following installed on your machine:
 
-## Expanding the ESLint configuration
+Node.js
+npm
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Installation Steps
+Clone the Repository:
 
-- Configure the top-level `parserOptions` property like this:
+git clone https://github.com/Jesus-D-Rodriguez/chicks-gold-frontend-challenge.git
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Navigate to the Project Directory:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+cd chiscks-gold-frontend-challenge
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Install Dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+npm install
+
+Run the Application:
+
+npm run dev
+
+Live demo:
+
+chicks-gold-frontend-challenge.vercel.app
