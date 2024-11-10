@@ -293,6 +293,14 @@
     .main-content-filters {
         height: 15%;
     }
+
+    .search-filter {
+        margin-left: 0;
+    }
+
+    .cards-container {
+        height: 80%;
+    }
 }
 
 
