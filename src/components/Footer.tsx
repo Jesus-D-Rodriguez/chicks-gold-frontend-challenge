@@ -37,7 +37,7 @@ const Footer:React.FC = () => {
             </div>
             <div className="about-us">
                 <div className="about-chicks-gold">
-                    <img style={{width:'175px', height:'auto', marginTop: '-9%'}} src="/chicks-logo-large.svg"></img>
+                    <img className='chicks-gold-footer' src="/chicks-logo-large.svg"></img>
                     <div className="links">
                         <p>support@chicksgold.com</p> 
                     </div>
