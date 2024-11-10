@@ -72,13 +72,17 @@ const Footer:React.FC = () => {
 
                 <div className="about-chicks-gold">
                     <div className="trust-review">
+                        
                         <div className="inside-trust-reviews">
-                            <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
-                            <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>  
-                            <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
-                            <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
-                            <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>
+                            <div style={{width:'max-content'}}>
+                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
+                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>  
+                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
+                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
+                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>
 
+                            </div>
+                            
                             <p>Trustpilot Reviews</p>
                         </div>
                     </div>
