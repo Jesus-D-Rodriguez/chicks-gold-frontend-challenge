@@ -136,6 +136,8 @@
     background-color: #5762d5;
     color: #fafcff;
     display: flex; 
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 40%;
 
@@ -145,11 +147,11 @@
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+}*/
 
 @media (max-width: 480px) {
     .cards {

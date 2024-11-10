@@ -11,7 +11,10 @@ const MainContent: React.FC  = () => {
 
     useEffect(() => {
         const updateItemsPerPage = () => {
-            if (window.innerWidth < 900) {
+
+            if (window.innerWidth < 600) {
+                setItemsPerPage(3);
+            } else if (window.innerWidth < 900) {
                 setItemsPerPage(6);
             } else if (window.innerWidth < 1110) {
                 setItemsPerPage(9);
@@ -176,7 +179,7 @@ const MainContent: React.FC  = () => {
             <div className="cards-container">
                 <div className="inside-cards-container">
                     <div className="cards-container-filter">
-                    Showing {indexOfFirstCard + 1} - {Math.min(indexOfLastCard, cardData.length)} from {cardData.length}
+                    Showing {Math.min(indexOfLastCard, cardData.length)} from {cardData.length}
                         <div className="item-filter">
                             <div className="item-filter-inside">
                                 <FontAwesomeIcon className="sort" icon={faArrowUpWideShort} />
