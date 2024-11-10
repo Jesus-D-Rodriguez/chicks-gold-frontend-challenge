@@ -16,7 +16,7 @@ git clone https://github.com/Jesus-D-Rodriguez/chicks-gold-frontend-challenge.gi
 
 Navigate to the Project Directory:
 
-cd chiscks-gold-frontend-challenge
+cd chicks-gold-frontend-challenge
 
 Install Dependencies:
 
