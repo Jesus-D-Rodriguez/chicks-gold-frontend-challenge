@@ -12,14 +12,14 @@ const MainContent: React.FC  = () => {
     useEffect(() => {
         const updateItemsPerPage = () => {
 
-            if (window.innerWidth < 600) {
+            if (window.innerWidth <= 600) {
                 setItemsPerPage(3);
-            } else if (window.innerWidth < 900) {
+            } else if (window.innerWidth <= 900) {
                 setItemsPerPage(6);
-            } else if (window.innerWidth < 1110) {
+            } else if (window.innerWidth <= 1110) {
                 setItemsPerPage(9);
             } 
-            else if (window.innerWidth < 1350) {
+            else if (window.innerWidth <= 1350) {
                 setItemsPerPage(12);
             }
             else{

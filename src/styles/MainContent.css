@@ -258,6 +258,14 @@
 }
 
 @media (max-width: 900px) {
+
+    .main-content-filters {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -267,6 +275,26 @@
     }
     
 }
+
+@media (max-width: 768px) {
+    .main-content-filters {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .select-game-filter, .search-filter, .price-filter, .item-filter {
+        width: 100%;
+    }
+
+    .price-filter {
+        margin-left: 0;
+    }
+
+    .main-content-filters {
+        height: 15%;
+    }
+}
+
 
 @media (max-width: 600px) {
     .cards {
