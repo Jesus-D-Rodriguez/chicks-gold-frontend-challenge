@@ -75,11 +75,11 @@ const Footer:React.FC = () => {
                         
                         <div className="inside-trust-reviews">
                             <div style={{width:'max-content'}}>
-                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
-                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>  
-                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
-                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img> 
-                                <img style={{width:'20px', height:'20px', paddingRight: '2px'}} src="/trustpilot-star.png"></img>
+                                <img className='star' src="/trustpilot-star.png"></img> 
+                                <img className='star' src="/trustpilot-star.png"></img>  
+                                <img className='star' src="/trustpilot-star.png"></img> 
+                                <img className='star' src="/trustpilot-star.png"></img> 
+                                <img className='star' id="last-star" src="/trustpilot-star.png"></img>
 
                             </div>
                             

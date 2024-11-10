@@ -10,8 +10,6 @@
 
 .background-image {
     position: absolute;
-    /*left: 50%;
-    transform: translateX(-50%);*/
     width: 100%;
     height: 70%; 
     z-index: 1;
@@ -20,7 +18,6 @@
 .main-content-container {
     height: 90%;
     width: 70%;
-    background-color: red;
     position: relative;
     z-index: 2;
     margin: auto;
@@ -29,9 +26,7 @@
 }
 
 .main-content-filters {
-    background-color: green;
     width: 96.5%;
-    /*height: 5%;*/
     height: var(--filter-size);
     position: relative;
     display: flex;
@@ -95,28 +90,6 @@
 .item-filter {
     background-color: var(--filter-color);
 }
-
-/*.search-filter::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 100%; 
-    width: 15px; 
-    height: 100%; 
-    background-color: rgba(255, 0, 0, 0.5); 
-    z-index: -1; 
-}
-
-.price-filter::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 100%;
-    width: 15px;
-    height: 100%;
-    background-color: rgba(255, 0, 0, 0.5);
-    z-index: -1;
-}*/
 
 .dolar, .sort, .feather {
     color: var(--icons-green);
@@ -196,7 +169,6 @@
 .inside-cards-container {
     height: 100%;
     width: 100%;
-    background-color: aqua;
 }
 
 .cards-container-filter {
@@ -209,7 +181,6 @@
 .cards {
     margin-top: 20px;
     height: 81%;
-    background-color: orange;
     gap: 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

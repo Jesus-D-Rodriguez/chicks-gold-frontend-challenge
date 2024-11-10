@@ -53,7 +53,7 @@ const MainContent: React.FC  = () => {
         );
 
         if (currentPage > 3) {
-            pageNumbers.push(<span key="start-ellipsis">...</span>);
+            pageNumbers.push(<span style={{height:'fit-content'}} key="start-ellipsis">...</span>);
         }
 
         const startPage = Math.max(2, currentPage - 1);
@@ -72,7 +72,7 @@ const MainContent: React.FC  = () => {
         }
 
         if (currentPage < totalPages - 2) {
-            pageNumbers.push(<span key="end-ellipsis">...</span>);
+            pageNumbers.push(<span style={{height:'fit-content'}} key="end-ellipsis">...</span>);
         }
 
 

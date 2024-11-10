@@ -188,6 +188,12 @@
     margin-top: -9%;
 }
 
+.star {
+    width:20px; 
+    height:20px; 
+    padding-right: 2px;
+}
+
 @media (max-width: 1350px) {
     .payment-methods, .social-media-icons, .about-us {
         width: 85%; 
@@ -271,5 +277,29 @@
 
     .inside-trust-reviews {
         flex-direction: column;
+    }
+
+    .star {
+        padding-right: 0;
+    }
+
+    .visa {
+        width: 60px;
+    }
+
+    .master-card {
+        width: 45px;
+    }
+
+    .american-express {
+        width: 67.5px;
+    }
+
+    .skrill {
+        width: 60px;
+    }
+
+    .payment-methods {
+        justify-content: center;
     }
 }
