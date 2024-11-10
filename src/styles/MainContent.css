@@ -288,6 +288,7 @@
 
     .price-filter {
         margin-left: 0;
+        border-right: none;
     }
 
     .main-content-filters {
