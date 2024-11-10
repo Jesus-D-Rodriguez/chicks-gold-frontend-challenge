@@ -68,6 +68,9 @@
     border-radius: 4px;
     white-space: nowrap;
 }
+.sign-in-button:hover {
+    cursor: pointer;
+}
 
 .chevron-down {
     margin-left: 2px;
@@ -78,5 +81,6 @@
 .cart-icon {
     margin-right: 2px;
     width: 15px;
+
     color: #fafcff;
 }

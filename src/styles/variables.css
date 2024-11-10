@@ -11,4 +11,5 @@
     --crypto-round-logo-width: 25px;
     --crypto-logo-width: calc(var(--crypto-round-logo-width) * 0.6);
     --main-content-max-width: 1110px;
+    --price-filter-width: 150px;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../styles/MainContent.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faMagnifyingGlass, faSackDollar, faFeather, faArrowUpWideShort, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -7,14 +7,89 @@ import Card from '../components/Card';
 
 const MainContent: React.FC  = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 15; 
+    const [itemsPerPage, setItemsPerPage] = useState(15);
 
+    useEffect(() => {
+        const updateItemsPerPage = () => {
+            if (window.innerWidth < 900) {
+                setItemsPerPage(6);
+            } else if (window.innerWidth < 1110) {
+                setItemsPerPage(9);
+            } 
+            else if (window.innerWidth < 1350) {
+                setItemsPerPage(12);
+            }
+            else{
+                setItemsPerPage(15);
+            }
+        };
+
+        updateItemsPerPage();
+        window.addEventListener('resize', updateItemsPerPage);
+
+        return () => window.removeEventListener('resize', updateItemsPerPage);
+    }, []);
+
+    const totalPages = Math.ceil(cardData.length / itemsPerPage);
 
     const indexOfLastCard = currentPage * itemsPerPage;
     const indexOfFirstCard = indexOfLastCard - itemsPerPage;
     const currentCards = cardData.slice(indexOfFirstCard, indexOfLastCard);
-    
-    const totalPages = Math.ceil(cardData.length / itemsPerPage);
+
+    const renderPageNumbers = () => {
+        const pageNumbers = [];
+
+        pageNumbers.push(
+            <button 
+                key={1}
+                onClick={() => setCurrentPage(1)}
+                className={currentPage === 1 ? 'active' : 'not-active'}
+            >
+                1
+            </button>
+        );
+
+        if (currentPage > 3) {
+            pageNumbers.push(<span key="start-ellipsis">...</span>);
+        }
+
+        const startPage = Math.max(2, currentPage - 1);
+        const endPage = Math.min(totalPages - 1, currentPage + 1);
+        
+        for (let i = startPage; i <= endPage; i++) {
+            pageNumbers.push(
+                <button 
+                    key={i}
+                    onClick={() => setCurrentPage(i)}
+                    className={currentPage === i ? 'active' : 'not-active'}
+                >
+                    {i}
+                </button>
+            );
+        }
+
+        if (currentPage < totalPages - 2) {
+            pageNumbers.push(<span key="end-ellipsis">...</span>);
+        }
+
+
+        if (totalPages > 1) {
+            pageNumbers.push(
+                <button 
+                    key={totalPages}
+                    onClick={() => setCurrentPage(totalPages)}
+                    className={currentPage === totalPages ? 'active' : 'not-active'}
+                >
+                    {totalPages}
+                </button>
+            );
+        }
+
+        return pageNumbers;
+    };
+
+
+
     return (<div className="main-content">
         <img src="/background.avif" alt="Background" className="background-image" />
         <div className="main-content-container" >
@@ -49,25 +124,29 @@ const MainContent: React.FC  = () => {
                     </div>
                 </div>
 
+                
+
                 <div className="price-filter">
-                    <div className="price-filter-inside">
+                    <div className="item-filter-inside">
                         <FontAwesomeIcon className="dolar" icon={faSackDollar} />
                         <div className="custom-select">
                             <div style={{display:'grid', alignItems:'center'}}>
                                 Price
                                 <select style={{height:'25px'}}>
                                     <option value="All" selected>All</option>
-                                    <option value="0-10">$0 - $10</option>
-                                    <option value="10-20">$10 - $20</option>
-                                    <option value="20-50">$20 - $50</option>
-                                    <option value="50-100">$50 - $100</option>
-                                    <option value="100+">$100+</option>
+                                    <option value="Weapons">$0 - $10</option>
+                                    <option value="Armor">$10 - $20</option>
+                                    <option value="Consumables">$20 - $50</option>
+                                    <option value="Crafting Materials">$50 - $100            </option>
+                                    <option value="Quest Items">100+</option>
+                                    
                                 </select>
                             </div>
                             <FontAwesomeIcon className="caret-icon" icon={faCaretDown} />
                         </div>
                     </div>
                 </div>
+
 
                 <div className="item-filter">
                     <div className="item-filter-inside">
@@ -148,41 +227,8 @@ const MainContent: React.FC  = () => {
                             >
                                 <FontAwesomeIcon icon={faChevronLeft} />
                             </button>
-                            
-                            <button 
-                                onClick={() => setCurrentPage(1)} 
-                                className={currentPage === 1 ? 'active' : 'not-active'}
-                            >
-                                1
-                            </button>
 
-                            {totalPages > 4 && currentPage > 3 && <span>...</span>}
-
-                            {Array.from({ length: Math.min(4, totalPages - 2) }, (_, index) => {
-                                const pageNumber = index + 2; // Comenzar desde la página 2
-                                //if (pageNumber === currentPage) return null; // No mostrar el botón de la página actual
-                                if (pageNumber > totalPages - 1) return null; // Evitar mostrar botones fuera de rango
-                                return (
-                                    <button 
-                                        key={pageNumber} 
-                                        onClick={() => setCurrentPage(pageNumber)} 
-                                        className={currentPage === pageNumber ? 'active' : 'not-active'}
-                                    >
-                                        {pageNumber}
-                                    </button>
-                                );
-                            })}
-
-                            {totalPages > 4 && currentPage < totalPages - 2 && <span>...</span>}
-
-                            {totalPages > 1 && (
-                                <button 
-                                    onClick={() => setCurrentPage(totalPages)} 
-                                    className={currentPage === totalPages ? 'active' : 'not-active'}
-                                >
-                                    {totalPages}
-                                </button>
-                            )}
+                            {renderPageNumbers()}
 
                             <button 
                                 className='next-button'
@@ -192,7 +238,7 @@ const MainContent: React.FC  = () => {
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </button>
                         </div>
-                    </div>
+                </div>
                 </div>
             </div>
         </div>

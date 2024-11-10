@@ -81,7 +81,7 @@
     background-color: var(--filter-color);
     margin-left: -20px;
     border-right: 1px solid var(--border-gray);
-    width: 150px;
+    width: var(--price-filter-width);
 }
 
 .price-filter-inside, .item-filter-inside {
@@ -177,6 +177,10 @@
     /*color: black; */
 }
 
+.custom-select.price select {
+    width: 300px;
+}
+
 .item-filter {
     width: 150px;
 }
@@ -208,9 +212,7 @@
     background-color: orange;
     gap: 20px;
     display: grid;
-    /*grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
     grid-template-columns: repeat(5, 1fr);
-    /*grid-template-rows: repeat(3, auto);*/
     grid-template-rows: repeat(3, 1fr);
 }
 
@@ -223,6 +225,10 @@
     width: 40px;
     /*margin: 20px;*/
     color: white;
+}
+
+.back-button:hover, .next-button:hover {
+    cursor: pointer;
 }
 
 .active {
@@ -244,10 +250,49 @@
     width: 40px;
 }
 
+.active:hover, .not-active:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 1500px) {
     .main-content-container {
         width: 85%;
 
+    }
+    
+}
+
+@media (max-width: 1350px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .main-content {
+        height: 1500px;
+    }
+    
+    
+}
+
+@media (max-width: 1110px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-content {
+        height: 1700px;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-content {
+        height: 1700px;
     }
     
 }
